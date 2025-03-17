@@ -13,7 +13,7 @@
     </header>
 
     <main>
-        <h1>Exercices sur les conditions</h1>
+        <h3>Exercices sur les conditions</h3>
         <form action="#" method="post">
             <label for="value_1">Saisir la valeur 1 (A):</label>
             <input type="number" id="value_1" name="value_1">

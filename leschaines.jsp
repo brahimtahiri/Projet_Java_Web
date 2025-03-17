@@ -17,7 +17,7 @@
 
         <form action="#" method="post">
             <label for="value">Saisir un texte (minimum 6 caractères)</label>
-            <input type="text" id="value" name="value" pattern=".{6,}" required>
+            <input type="text" id="value" name="value" pattern=".{6,}">
             <button type="submit">Afficher</button>
         </form>
 
