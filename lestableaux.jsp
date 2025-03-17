@@ -28,41 +28,35 @@
         
                 int[] numbers = new int[numbers_str.length];
                 
-                // Conversion des chaînes en entiers
                 for (int i = 0; i < numbers_str.length; i++) {
                     numbers[i] = Integer.parseInt(numbers_str[i]);
                 }
                 
-                // Affichage du carré de la première valeur
-                out.println(String.format("Le carré de la première valeur (%d) est : %d", numbers[0], numbers[0] * numbers[0]));
+                out.println(String.format("Le carré de la première valeur (%d) est : %d.<br />", numbers[0], numbers[0] * numbers[0]));
                 
-                // Affichage de la somme des deux premières valeurs
-                out.println(String.format("La somme des deux premières valeurs est %d + %d = %d.", numbers[0], numbers[1], numbers[0] + numbers[1]));
+                out.println(String.format("La somme des deux premières valeurs est %d + %d = %d.<br />", numbers[0], numbers[1], numbers[0] + numbers[1]));
                 
-                // Calcul de la somme de toutes les valeurs
                 int sum = 0;
                 for (int i = 0; i < numbers.length; i++) {
                     sum += numbers[i];
                 }
-                out.println(String.format("La somme de toutes les valeurs est %d", sum));
+                out.println(String.format("La somme de toutes les valeurs est %d.<br />", sum));
 
-                // Trouver la valeur maximum
                 int max = numbers[0];
                 for (int i = 1; i < numbers.length; i++) {
                     if (numbers[i] > max) {
                         max = numbers[i];
                     }
                 }
-                out.println(String.format("La valeur maximum est : %d", max));
+                out.println(String.format("La valeur maximum est : %d.<br />", max));
 
-                // Trouver la valeur minimum
                 int min = numbers[0];
                 for (int i = 1; i < numbers.length; i++) {
                     if (numbers[i] < min) {
                         min = numbers[i];
                     }
                 }
-                out.println(String.format("La valeur minimum est : %d", min));
+                out.println(String.format("La valeur minimum est : %d.<br />", min));
             } else {
                 out.println("<p>Veuillez entrer des nombres séparés par des espaces.</p>");
             }
