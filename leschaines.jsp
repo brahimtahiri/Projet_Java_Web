@@ -1,6 +1,4 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8" %>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -48,8 +46,6 @@
 </body>
 </html>
     
-<h2>Exercice 1 : Combien de 'e' dans notre chaine de charactère ?</h2>
-<p>Ecrire un programme pour compter le nombre de lettre e dans votre chaine de charactères</p>
 
 <h2>Exercice 2 : Affichage verticale</h2>
 <p>Ecrire le programme pour afficher le texte en vertical</br>
