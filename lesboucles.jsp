@@ -51,7 +51,7 @@
                 }
             }
 
-            if (valueStr != null && !value.isEmpty()) {
+            if (valueStr != null && !valueStr.isEmpty()) {
                 out.println("<h2>Exercice 3 : Triangle rectangle inversé</h2>");
 
                 int value = Integer.parseInt(valueStr);
