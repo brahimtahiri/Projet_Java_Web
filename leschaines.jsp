@@ -35,7 +35,7 @@
                         number_of_e++;
                     }
                 }
-                out.print(String.format("Il y a, %d 'E', dans la chaîne de caractères.", number_of_e));
+                out.print(String.format("Il y a, %d 'E', dans la chaîne de caractères. :", number_of_e));
                 out.print("</section>");
 
                 out.print("<section>");
@@ -46,11 +46,22 @@
                 out.print("</section>");
 
                 out.print("<section>");
-                out.print("<h3>Exercice 3 : Retour à la ligne</h3>");
+                out.print("<h3>Exercice 3 : Retour à la ligne :</h3>");
                 for (int i = 0; i < value.length(); i++) {
                     if (value.charAt(i) == ' ') {
                     out.print("<br />");
                     } else {
+                        out.print(value.charAt(i));
+                    }
+                }
+                out.print("</section>");
+
+                 out.print("<section>");
+                out.print("<h3>Exercice 4 : Afficher une lettre sur deux :</h3>");
+                boolean show_letter = true;
+
+                for (int i = 0; i < value.length(); i++) {
+                    if (show_letter) {
                         out.print(value.charAt(i));
                     }
                 }
@@ -60,13 +71,6 @@
     </main> 
 </body>
 </html>
-
-<h2>Exercice 3 : Retour à la ligne</h2>
-<p>La présence d'un espace provoque un retour à la ligne </br>
-Exemple : L'hiver sera pluvieux</br>
-L'hiver</br>
-sera</br>
-pluvieux</p>
 
 <h2>Exercice 4 : Afficher une lettre sur deux</h2>
 <p>Ecrire le programme pour afficher seulement une lettre sur deux de votre texte </br>

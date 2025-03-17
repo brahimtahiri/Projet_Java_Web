@@ -36,7 +36,7 @@
                 int value_2 = Integer.parseInt(value_2_str);
                 int value_3 = Integer.parseInt(value_3_str);
 
-                out.print("<h3>Exercice 1 : Comparaison</h3>");
+                out.print("<h3>Exercice 1 : Comparaison :</h3>");
 
                 String message;
                 if (value_1 <= value_3 && value_3 <= value_2) {
