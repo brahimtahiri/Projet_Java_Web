@@ -22,11 +22,19 @@
         </form>
 
         <h2>Exercice 1 : Le carré d'étoiles</h2>
-        <%! 
-            int value = Integer.parseInt(request.getParameter("value"));
-            for (int i = 1; i <= value; i++) {
-                for (int j = 1; j <= value; j++) {
-                    out.print("*");
+        
+        <% 
+            // Récupérer la valeur de l'utilisateur
+            String valueStr = request.getParameter("value");
+            if (valueStr != null && !valueStr.isEmpty()) {
+                int value = Integer.parseInt(valueStr);
+
+                // Afficher le carré d'étoiles
+                for (int i = 1; i <= value; i++) {
+                    for (int j = 1; j <= value; j++) {
+                        out.print("*");
+                    }
+                    out.println("<br>"); // Retour à la ligne après chaque ligne d'étoiles
                 }
             }
         %>
