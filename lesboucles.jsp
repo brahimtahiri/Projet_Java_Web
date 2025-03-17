@@ -27,7 +27,7 @@
             if (valueStr != null && !valueStr.isEmpty()) {
                 int value = Integer.parseInt(valueStr);
 
-                out.println("<h2>Exercice 1 : Le carré d'étoiles</h2>");
+                out.println("<h2>Exercice 1 : Le carré d'étoiles :</h2>");
                 for (int i = 1; i <= value; i++) {
                     for (int j = 1; j <= value; j++) {
                         out.print("*");
@@ -35,7 +35,7 @@
                     out.println("<br />");
                 }
 
-                out.println("<h2>Exercice 2 : Triangle rectangle gauche</h2>");
+                out.println("<h2>Exercice 2 : Triangle rectangle gauche :</h2>");
                 for (int i = 1; i <= value; i++) {
                     for (int j = 1; j <= i; j++) {
                         out.print("*");
@@ -43,7 +43,7 @@
                     out.println("<br />");
                 }
 
-                out.println("<h2>Exercice 3 : Triangle rectangle inversé</h2>");
+                out.println("<h2>Exercice 3 : Triangle rectangle inversé :</h2>");
                 for (int i = value; i > 0; i--) {
                     for (int j = 1; j <= i; j++) {
                         out.print("*");
@@ -51,7 +51,7 @@
                     out.println("<br />");
                 }
 
-                out.println("<h2>Exercice 4 : Triangle rectangle 2</h2>");
+                out.println("<h2>Exercice 4 : Triangle rectangle 2 :</h2>");
                 for (int i = value; i > 0; i--) {
                     for (int j = 1; j < i; j++) {
                         out.print("&nbsp;&nbsp;");
@@ -64,16 +64,41 @@
                     out.println("<br />");
                 }
 
-                out.println("<h2>Exercice 5 : Triangle isocèle</h2>");
+                out.println("<h2>Exercice 5 : Triangle isocèle :</h2>");
                 for (int i = value; i > 0; i--) {
                     for (int j = 1; j < i; j++) {
-                        out.print("&nbsp;&nbsp;");
+                        out.print("&nbsp;");
                     }
 
                     for (int k = 0; k <= value - i; k++) {
                         out.print("*");
                     }
 
+                    out.println("<br />");
+                }
+
+                out.println("<h2>Exercice 6 : Le demi-losange :</h2>")
+                for (int i = value; i > 0; i--) {
+                    for (int j = 1; j < i; j++) {
+                        out.print(" ");
+                    }
+            
+                    for (int k = 0; k <= value - i; k++) {
+                        out.print("*");
+                    }
+            
+                    System.out.println("<br />");
+                }
+                
+                for (int i = 0; i <= value; i++) {
+                    for (int j = 0; j < i; j++) {
+                        out.print(" ");
+                    }
+                    
+                    for (int k = 0; k < value - i; k++) {
+                        out.print("*");
+                    }
+                    
                     out.println("<br />");
                 }
             }
