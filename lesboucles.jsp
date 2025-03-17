@@ -22,10 +22,10 @@
         </form>
         
         <% 
-            String valueStr = request.getParameter("value");
+            String value_str = request.getParameter("value");
 
-            if (valueStr != null && !valueStr.isEmpty()) {
-                int value = Integer.parseInt(valueStr);
+            if (value_str != null && !value_str.isEmpty()) {
+                int value = Integer.parseInt(value_str);
 
                 out.print("<section>");
                 out.println("<h3>Exercice 1 : Le carré d'étoiles :</h3>");

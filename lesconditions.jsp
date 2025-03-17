@@ -1,48 +1,63 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<html>
+
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-<title>les conditions</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFE114 - Projet Java Web</title>
 </head>
-<body bgcolor=white>
-<h1>Exercices sur les conditions</h1>
-<form action="#" method="post">
-    <p>Saisir la valeur 1 : <input type="text" id="inputValeur" name="valeur1">
-    <p>Saisir la valeur 2 : <input type="text" id="inputValeur" name="valeur2">
-    <p><input type="submit" value="Afficher">
-</form>
-<%-- Récupération des valeurs --%>
-    <% String valeur1 = request.getParameter("valeur1"); %>
-    <% String valeur2 = request.getParameter("valeur2"); %>
+<body>
+    <header>
+        <h2>Application Java développée par Brahim TAHIRI</h2>
+    </header>
 
-    <%-- Vérification de la condition entre les deux valeurs --%>
-    <% if (valeur1 != null && valeur2 != null) { %>
-        <%-- Conversion des valeurs en entiers pour la comparaison --%>
-        <% int intValeur1 = Integer.parseInt(valeur1); %>
-        <% int intValeur2 = Integer.parseInt(valeur2); %>
-        
-        <%-- Condition if pour comparer les valeurs --%>
-        <% if (intValeur1 > intValeur2) { %>
-            <p>Valeur 1 est supérieure à Valeur 2.</p>
-        <% } else if (intValeur1 < intValeur2) { %>
-            <p>Valeur 1 est inférieure à Valeur 2.</p>
-        <% } else { %>
-            <p>Valeur 1 est égale à Valeur 2.</p>
-        <% } %>
-   
-    
-<h2>Exercice 1 : Comparaison 1</h2>
-<p>Ecrire un programme qui demande à l'utilisateur de saisir 3 valeurs (des chiffres),</br>
-A, B et C et dites nous si la valeur de C est comprise entre A et B.</br>
-Exemple :</br>
-A = 10</br>
-B = 20</br>
-C = 15</br>
-Oui C est compris entre A et B</p>
+    <main>
+        <h1>Exercices sur les conditions</h1>
+        <form action="#" method="post">
+            <label for="value_1">Saisir la valeur 1 (A):</label>
+            <input type="number" id="value_1" name="value_1">
+            <label for="value_2">Saisir la valeur 2 (B) :</label>
+            <input type="number" id="value_2" name="value_2">
+            <label for="value_3">Saisir la valeur 3 (C):</label>
+            <input type="number" id="value_3" name="value_3">
+            <button type="submit">Afficher</button>
+        </form>
 
-<h2>Exercice 2 : Pair ou Impair ?</h2>
-<p>Écrivez un programme pour vérifier si un nombre est pair ou impair en utilisant une structure if</p>
+        <%
+            String value_1_str = request.getParameter("value_1");
+            String value_2_str = request.getParameter("value_2");
+            String value_3_str = request.getParameter("value_3");
 
-<% } %>
-<p><a href="index.html">Retour au sommaire</a></p>
+            if (value_1_str != null && value_2_str != null && value_3_str != null &&
+                !value_1_str.isEmpty() && !value_2_str.isEmpty() && !value_3_str.isEmpty()) {
+
+                int value_1 = Integer.parseInt(value_1_str);
+                int value_2 = Integer.parseInt(value_2_str);
+                int value_3 = Integer.parseInt(value_3_str);
+
+                out.println("<h3>Exercice 1 : Comparaison</h3>");
+
+                String message;
+                if (value_1 <= value_3 && value_3 <= value_2) {
+                    message = "est";
+                } else {
+                    message = "n'est pas";
+                }
+
+                out.print(String.format("%d %s compris entre %d et %d.<br />", value_3, message, value_1, value_2));
+
+                out.println("<h3>Exercice 2 : Pair ou impair ?</h3>");
+
+                if (value_3 % 2 == 0) {
+                    message = "pair";
+                } else {
+                    message = "impair";
+                }
+
+                out.print(String.format("%d est un nombre %s.<br />", value_3, message));
+            }
+        %>
+    </main>
 </body>
 </html>
