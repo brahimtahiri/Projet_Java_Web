@@ -54,7 +54,7 @@
             if (valueStr != null && !value.isEmpty()) {
                 out.println("<h2>Exercice 3 : Triangle rectangle inversé</h2>")
 
-                int value = Integer.parseInt(valueStr)
+                int value = Integer.parseInt(valueStr);
 
                 for (int i = 5; i > 0; i--) {
                     for (int j = 1; j <= i; j++) {
