@@ -1,4 +1,4 @@
-<%@page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -49,14 +49,14 @@
                 out.print("<h3>Exercice 3 : Retour à la ligne :</h3>");
                 for (int i = 0; i < value.length(); i++) {
                     if (value.charAt(i) == ' ') {
-                    out.print("<br />");
+                        out.print("<br />");
                     } else {
                         out.print(value.charAt(i));
                     }
                 }
                 out.print("</section>");
 
-                 out.print("<section>");
+                out.print("<section>");
                 out.print("<h3>Exercice 4 : Afficher une lettre sur deux :</h3>");
                 boolean show_letter = true;
 
@@ -67,20 +67,47 @@
                     show_letter = !show_letter;
                 }
                 out.print("</section>");
+
+                out.print("<section>");
+                out.print("<h3>Exercice 5 : La phrase en verlant</h3>");
+                for (int i = value.length() - 1; i >= 0; i--) {
+                    out.print(value.charAt(i));
+                }
+                out.print("</section>");
+
+                out.print("<section>");
+                out.print("<h3>Exercice 6 : Consonnes et voyelles</h3>");
+                char[] vowels = {'a', 'e', 'i', 'o', 'u', 'y'};
+                char[] consonants = {'b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'z'};
+
+                int number_of_vowels = 0;
+                int number_of_consonants = 0;
+
+                String value_to_lower_case = value.toLowerCase();
+
+                for (int i = 0; i < value_to_lower_case.length(); i++) {
+                    char letter = value_to_lower_case.charAt(i);
+
+                    for (char vowel : vowels) {
+                        if (letter == vowel) {
+                            number_of_vowels++;
+                            break;
+                        }
+                    }
+
+                    for (char consonant : consonants) {
+                        if (letter == consonant) {
+                            number_of_consonants++;
+                            break;
+                        }
+                    }
+                }
+                out.print(String.format("<p>Nombre de voyelles: %d, nombre de consonnes: %d</p>", number_of_vowels, number_of_consonants));
+                out.print("</section>");
             }
         %>
+
+        <a href="index.html">Retour au sommaire</a>
     </main> 
-</body>
-</html>
-
-<h2>Exercice 5 : La phrase en verlant</h2>
-<p>Ecrire le programme afin d'afficher le texte en verlant </br>
-Exemple : L'hiver sera pluvieux</br>
-xueivulp ares revih'l</p>
-
-<h2>Exercice 6 : Consonnes et voyelles</h2>
-<p>Ecrire le programme afin de compter les consonnes et les voyelles dans votre texte</p>
-
-<p><a href="index.html">Retour au sommaire</a></p>
 </body>
 </html>
