@@ -17,13 +17,10 @@
         <form action="#" method="post">
             <label for="value_1">Saisir la valeur 1 (A):</label>
             <input type="number" id="value_1" name="value_1">
-            <br />
             <label for="value_2">Saisir la valeur 2 (B) :</label>
             <input type="number" id="value_2" name="value_2">
-            <br />
             <label for="value_3">Saisir la valeur 3 (C):</label>
             <input type="number" id="value_3" name="value_3">
-            <br />
             <button type="submit">Afficher</button>
         </form>
 

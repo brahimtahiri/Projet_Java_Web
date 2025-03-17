@@ -1,35 +1,47 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<html>
+
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-<title>Les chaines</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFE114 - Projet Java Web</title>
 </head>
-<body bgcolor=white>
-<h1>Exercices sur les chaines de charactères</h1>
-<form action="#" method="post">
-    <p>Saisir une chaine (Du texte avec 6 caractères minimum) : <input type="text" id="inputValeur" name="chaine">
-    <p><input type="submit" value="Afficher">
-</form>
-<%-- Récupération des valeurs --%>
-    <% String chaine = request.getParameter("chaine"); %>
-    
-    <% if (chaine != null) { %>
+<body>
+    <header>
+        <h2>Application Java développée par Brahim TAHIRI</h2>
+    </header>
+    <main>
+        <h3>Exercices sur les chaines de charactères</h3>
 
-    <%-- Obtention de la longueur de la chaîne --%>
-    <% int longueurChaine = chaine.length(); %>
-    <p>La longueur de votre chaîne est de <%= longueurChaine %> caractères</p>
+        <form action="#" method="post">
+            <label for="value">Saisir un texte (minimum 6 caractères)</label>
+            <input type="number" id="value" name="value"  pattern=".{6,}">
+            <button type="submit">Afficher</button>
+        </form>
 
-    <%-- Extraction du 3° caractère dans votre chaine --%>
-    <% char caractereExtrait = chaine.charAt(2); %>
-    <p>Le 3° caractère de votre chaine est la lettre <%= caractereExtrait %></p>
+        <%
+            String value = request.getParameter("value");
 
-    <%-- Obtention d'une sous-chaîne --%>
-    <% String sousChaine = chaine.substring(2, 6); %>
-    <p>Une sous chaine de votre texte : <%= sousChaine %></p>
+            if (value != null && !value.isEmpty()) {
+                out.print(String.format("La longueur de votre chaîne de caractère est de %d caractères", value.length()));
 
-    <%-- Recharche de la lettre "e" --%>
-    <% char recherche = 'e'; 
-       int position = chaine.indexOf(recherche); %>
-    <p>Votre premier "e" est en : <%= position %></p>
+                out.print("<h3>Exercice 1 : Combien de 'E' dans notre chaine de charactères ?</h3>")
+
+                int number_of_e = 0;
+        
+                for (int i = 0; i < value.length(); i++) {
+                    if (value.charAt(i) == 'e' || value.charAt(i) == 'E') {
+                        number_of_e ++;
+                    }
+                }
+
+                out.print(String.format("Il y a %d 'E' dans la chaîne de caractères.", number_of_e));
+            }
+        %>
+    </main> 
+</body>
+</html>
 
     
 <h2>Exercice 1 : Combien de 'e' dans notre chaine de charactère ?</h2>
