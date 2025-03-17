@@ -9,11 +9,11 @@
 </head>
 <body>
     <header>
-        <h2>Application Flask développée par Brahim TAHIRI</h2>
+        <h2>Application Java développée par Brahim TAHIRI</h2>
     </header>
 
     <main>
-        <h1>Exercices sur les boucles</h1>
+        <h3>Exercices sur les boucles</h3>
         
         <form action="#" method="post">
             <label for="value">Saisir le nombre d'étoiles :</label>
@@ -56,7 +56,7 @@
 
                 int value = Integer.parseInt(valueStr);
 
-                for (int i = 5; i > 0; i--) {
+                for (int i = value; i > 0; i--) {
                     for (int j = 1; j <= i; j++) {
                         out.print("*");
                     }
