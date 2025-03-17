@@ -63,8 +63,8 @@
                 for (int i = 0; i < value.length(); i++) {
                     if (show_letter) {
                         out.print(value.charAt(i));
-                        show_letter = !show_letter;
                     }
+                    show_letter = !show_letter;
                 }
                 out.print("</section>");
             }
