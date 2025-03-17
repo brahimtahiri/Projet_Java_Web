@@ -40,8 +40,6 @@
 
         <h2>Exercice 2 : Triangle rectangle gauche</h2>
         <% 
-            String valueStr = request.getParameter("value");
-
             if (valueStr != null && !valueStr.isEmpty()) {
                 int value = Integer.parseInt(valueStr);
 
