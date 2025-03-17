@@ -25,7 +25,9 @@
         <%! 
             int value = Integer.parseInt(request.getParameter("value"));
             for (int i = 1; i <= value; i++) {
-                out.print("*");
+                for (int j = 1; i <= value; i++) {
+                    out.print("*")
+                }
             }
         %>
 
