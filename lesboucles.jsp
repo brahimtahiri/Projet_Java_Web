@@ -25,7 +25,7 @@
             String valueStr = request.getParameter("value");
 
             if (valueStr != null && !valueStr.isEmpty()) {
-                out.println("<h2>Exercice 1 : Le carré d'étoiles</h2>")
+                out.println("<h2>Exercice 1 : Le carré d'étoiles</h2>");
 
 
                 int value = Integer.parseInt(valueStr);
@@ -39,7 +39,7 @@
             }
 
             if (valueStr != null && !valueStr.isEmpty()) {
-                out.println("<h2>Exercice 2 : Triangle rectangle gauche</h2>")
+                out.println("<h2>Exercice 2 : Triangle rectangle gauche</h2>");
 
                 int value = Integer.parseInt(valueStr);
 
@@ -52,7 +52,7 @@
             }
 
             if (valueStr != null && !value.isEmpty()) {
-                out.println("<h2>Exercice 3 : Triangle rectangle inversé</h2>")
+                out.println("<h2>Exercice 3 : Triangle rectangle inversé</h2>");
 
                 int value = Integer.parseInt(valueStr);
 
