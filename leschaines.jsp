@@ -44,6 +44,17 @@
                     out.print(String.format("%s</br>", value.charAt(i)));
                 }
                 out.print("</section>");
+
+                out.print("<section>");
+                out.print("<h3>Exercice 3 : Retour à la ligne</h3>");
+                for (int i = 0; i < value.length(); i++) {
+                    if (value.charAt(i) == ' ') {
+                    out.print("<br />");
+                    } else {
+                        out.print(value.charAt(i));
+                    }
+                }
+                out.print("</section>");
             }
         %>
     </main> 
