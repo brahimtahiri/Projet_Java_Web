@@ -27,31 +27,38 @@
             if (valueStr != null && !valueStr.isEmpty()) {
                 int value = Integer.parseInt(valueStr);
 
-                out.println("<h2>Exercice 1 : Le carré d'étoiles :</h2>");
+                out.print("<section>");
+                out.println("<h3>Exercice 1 : Le carré d'étoiles :</h3>");
                 for (int i = 1; i <= value; i++) {
                     for (int j = 1; j <= value; j++) {
                         out.print("*");
                     }
                     out.println("<br />");
                 }
+                out.print("</section>");
 
-                out.println("<h2>Exercice 2 : Triangle rectangle gauche :</h2>");
+                out.print("<section>");
+                out.println("<h3>Exercice 2 : Triangle rectangle gauche :</h3>");
                 for (int i = 1; i <= value; i++) {
                     for (int j = 1; j <= i; j++) {
                         out.print("*");
                     }
                     out.println("<br />");
                 }
+                out.print("</section>");
 
-                out.println("<h2>Exercice 3 : Triangle rectangle inversé :</h2>");
+                out.print("<section>");
+                out.println("<h3>Exercice 3 : Triangle rectangle inversé :</h3>");
                 for (int i = value; i > 0; i--) {
                     for (int j = 1; j <= i; j++) {
                         out.print("*");
                     }
                     out.println("<br />");
                 }
+                out.print("</section>");
 
-                out.println("<h2>Exercice 4 : Triangle rectangle 2 :</h2>");
+                out.print("<section>");
+                out.println("<h3>Exercice 4 : Triangle rectangle 2 :</h3>");
                 for (int i = value; i > 0; i--) {
                     for (int j = 1; j < i; j++) {
                         out.print("&nbsp;&nbsp;");
@@ -63,8 +70,10 @@
 
                     out.println("<br />");
                 }
+                out.print("</section>");
 
-                out.println("<h2>Exercice 5 : Triangle isocèle :</h2>");
+                out.print("<section>");
+                out.println("<h3>Exercice 5 : Triangle isocèle :</h3>");
                 for (int i = value; i > 0; i--) {
                     for (int j = 1; j < i; j++) {
                         out.print("&nbsp;");
@@ -76,8 +85,11 @@
 
                     out.println("<br />");
                 }
+                out.print("</section>");
 
-                out.println("<h2>Exercice 6 : Le demi-losange :</h2>")
+                out.print("<section>");
+                out.println("<h3>Exercice 6 : Le demi-losange :</h3>");
+                // Partie supérieure du losange
                 for (int i = value; i > 0; i--) {
                     for (int j = 1; j < i; j++) {
                         out.print(" ");
@@ -87,9 +99,10 @@
                         out.print("*");
                     }
             
-                    System.out.println("<br />");
+                    out.println("<br />");
                 }
                 
+                // Partie inférieure du losange
                 for (int i = 0; i <= value; i++) {
                     for (int j = 0; j < i; j++) {
                         out.print(" ");
@@ -101,32 +114,16 @@
                     
                     out.println("<br />");
                 }
+                out.print("</section>");
+
+                out.print("<section>");
+                out.println("<h3>Exercice 7 : La table de multiplication</h3>");
+                for (int i = 1; i <= 10; i++) {
+                    out.print(String.format("%d x %d = %d<br />", i, value, i * value));
+                }
+                out.print("</section>");
             }
         %>
-
-        <h2>Exercice 6 : Le demi losange</h2>
-        <p>Ecrire le code afin de produire un losange</p>
-        <p>Exemple si l'utilisateur saisie la valeur 5 :</p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>
-           &nbsp;&nbsp;&nbsp;&nbsp;***</br>
-           &nbsp;&nbsp;****</br>*****
-        </p>
-        <p>*****</br>
-           &nbsp;&nbsp;****</br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*
-        </p>
-
-        <h2>Exercice 7 : La table de multiplication</h2>
-        <p>Ecrire le code afin de créer une table de multiplication</p>
-        <p>Exemple si l'utilisateur saisie la valeur 5 :</p>
-        <p>5 x 1 = 5</p>
-        <p>5 x 2 = 10</p>
-        <p>5 x 3 = 15</p>
-        <p>5 x 4 = 20</p>
-        <p>5 x 5 = 25</p>
 
         <a href="index.html">Retour au sommaire</a>
     </main>
