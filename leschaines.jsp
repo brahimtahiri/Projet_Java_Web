@@ -25,38 +25,30 @@
             String value = request.getParameter("value");
 
             if (value != null && !value.isEmpty()) {
-                // Affichage de la longueur de la chaîne
                 out.print(String.format("La longueur de votre chaîne de caractères est de %d caractères.<br>", value.length()));
 
-                // Exercice 1 : Compter le nombre de 'E'
+                out.print("<section>");
                 out.print("<h3>Exercice 1 : Combien de 'E' dans notre chaîne de caractères ?</h3>");
-
                 int number_of_e = 0;
-
                 for (int i = 0; i < value.length(); i++) {
                     if (value.charAt(i) == 'e' || value.charAt(i) == 'E') {
                         number_of_e++;
                     }
                 }
+                out.print(String.format("Il y a, %d 'E', dans la chaîne de caractères.", number_of_e));
+                out.print("</section>");
 
-                out.print(String.format("Il y a %d 'E' dans la chaîne de caractères.", number_of_e));
+                out.print("<section>");
+                out.print("<h3>Exercice 2 : Affichage verticale</h3>");
+                for (int i = 0; i < value.length(); i++) {
+                    out.print(String.format("%s</br>", value.charAt(i)));
+                }
+                out.print("</section>");
             }
         %>
     </main> 
 </body>
 </html>
-    
-
-<h2>Exercice 2 : Affichage verticale</h2>
-<p>Ecrire le programme pour afficher le texte en vertical</br>
-Exemple : Bonjour</br>
-B</br>
-o</br>
-n</br>
-j</br>
-o</br>
-u</br>
-r</p>
 
 <h2>Exercice 3 : Retour à la ligne</h2>
 <p>La présence d'un espace provoque un retour à la ligne </br>

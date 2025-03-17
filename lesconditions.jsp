@@ -36,7 +36,7 @@
                 int value_2 = Integer.parseInt(value_2_str);
                 int value_3 = Integer.parseInt(value_3_str);
 
-                out.println("<h3>Exercice 1 : Comparaison</h3>");
+                out.print("<h3>Exercice 1 : Comparaison</h3>");
 
                 String message;
                 if (value_1 <= value_3 && value_3 <= value_2) {
@@ -47,7 +47,7 @@
 
                 out.print(String.format("%d %s compris entre %d et %d.<br />", value_3, message, value_1, value_2));
 
-                out.println("<h3>Exercice 2 : Pair ou impair ?</h3>");
+                out.print("<h3>Exercice 2 : Pair ou impair ?</h3>");
 
                 if (value_3 % 2 == 0) {
                     message = "pair";
