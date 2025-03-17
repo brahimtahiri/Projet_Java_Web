@@ -54,7 +54,20 @@
                 out.println("<h2>Exercice 4 : Triangle rectangle 2</h2>");
                 for (int i = value; i > 0; i--) {
                     for (int j = 1; j < i; j++) {
-                        out.print("&nbsp;");
+                        out.print("&nbsp;&nbsp;");
+                    }
+
+                    for (int k = 0; k <= value - i; k++) {
+                        out.print("*");
+                    }
+
+                    out.println("<br />");
+                }
+
+                out.println("<h2>Exercice 5 : Triangle isocèle</h2>");
+                for (int i = value; i > 0; i--) {
+                    for (int j = 1; j < i; j++) {
+                        out.print("&nbsp;&nbsp;");
                     }
 
                     for (int k = 0; k <= value - i; k++) {
@@ -65,25 +78,6 @@
                 }
             }
         %>
-
-        <h2>Exercice 4 : Triangle rectangle 2</h2>
-        <p>Ecrire le code afin de produire un triangle rectangle aligné sur la droite</p>
-        <p>Exemple si l'utilisateur saisie la valeur 5 :</p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>
-           &nbsp;&nbsp;&nbsp;&nbsp;***</br>
-           &nbsp;&nbsp;&nbsp;****</br>*****
-        </p>
-
-        <h2>Exercice 5 : Triangle isocele</h2>
-        <p>Ecrire le code afin de produire un triangle isocele</p>
-        <p>Exemple si l'utilisateur saisie la valeur 5 :</p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;*</br>
-           &nbsp;&nbsp;&nbsp;**</br>
-           &nbsp;&nbsp;***</br>
-           &nbsp;****</br>
-           *****
-        </p>
 
         <h2>Exercice 6 : Le demi losange</h2>
         <p>Ecrire le code afin de produire un losange</p>
